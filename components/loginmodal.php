@@ -3,8 +3,6 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
       <div class="modal-body">
       <p class="text-center small">Enter your username &amp; password to login</p>
@@ -19,7 +17,6 @@
         <p class="text-left small" style="margin-top: 1rem">Don't have account? <a href="pages-register.html" style="color:blue">Create an account</a></p>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
         <button type="button" class="btn btn-primary">Access</button>
       </div>
     </div>
