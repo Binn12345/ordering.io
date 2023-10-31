@@ -31,7 +31,10 @@
 </head>
 
 <body>
-  <?php include 'components/globalmodal.php' ?>
+  <?php 
+    include 'components/globalmodal.php';
+    include 'functions/loginconnection.php'; 
+  ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">

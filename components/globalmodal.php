@@ -5,20 +5,22 @@
       <div class="modal-header">
       </div>
       <div class="modal-body">
-      <p class="text-center small">Enter your username &amp; password to login</p>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="username">
-            <label for="floatingInput">Username or Email</label>
+      <form action="functions/loginconnection.php" method="POST" novalidate>
+        <p class="text-center small">Enter your username &amp; password to login</p>
+          <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" name="username" placeholder="username">
+              <label for="floatingInput">Username or Email</label>
+          </div>
+          <div class="form-floating">
+              <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="">
+              <label for="floatingPassword">Password</label>
+          </div>
+          <p class="text-left small" style="margin-top: 1rem">Don't have account? <a href="#" style="color:blue" data-bs-toggle="modal" data-bs-target="#exampleregisterModal" >Create an account</a></p>
         </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="">
-            <label for="floatingPassword">Password</label>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" id="access">Access</button>
         </div>
-        <p class="text-left small" style="margin-top: 1rem">Don't have account? <a href="#" style="color:blue" data-bs-toggle="modal" data-bs-target="#exampleregisterModal" >Create an account</a></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Access</button>
-      </div>
+      </form>
     </div>
   </div>
 </div>

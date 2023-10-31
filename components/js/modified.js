@@ -4,10 +4,12 @@ $(document).ready(function() {
     $('#exampleModal').on('hidden.bs.modal', function () {
         // Clear the input fields using jQuery
         $('#floatingInput, #floatingPassword').val('');
-      });
+    });
 
-
-      // register field events
+    // $('#access').on('click', function () {
+    //     // Clear the input fields using jQuery
+    //     $('#floatingInput, #floatingPassword').val('');
+    // });
 
 });
 
