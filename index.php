@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Yummy Bootstrap Template - Index</title>
+  <title>FoodHub IO</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,6 +38,7 @@
 </head>
 
 <body>
+  <?php include 'components/loginmodal.php' ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -46,7 +47,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Yummy<span>.</span></h1>
+        <h1>FH<span></span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -75,6 +76,7 @@
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="" class="btn-book-a-table" style="background-color:rgb(21, 152, 252);" data-bs-toggle="modal" data-bs-target="#exampleModal">login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -140,7 +142,7 @@
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
-                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+                <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> -->
               </div>
             </div>
           </div>
@@ -1081,7 +1083,14 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="components/js/modified.js"></script>
+
+  
+
+
+  
 
 </body>
 
