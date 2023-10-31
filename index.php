@@ -38,7 +38,7 @@
 </head>
 
 <body>
-  <?php include 'components/loginmodal.php' ?>
+  <?php include 'components/globalmodal.php' ?>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">

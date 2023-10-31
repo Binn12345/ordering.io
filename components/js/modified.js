@@ -6,6 +6,12 @@ $(document).ready(function() {
         $('#floatingInput, #floatingPassword').val('');
       });
 
+
+      // register field events
+
 });
+
+
+
 
   
