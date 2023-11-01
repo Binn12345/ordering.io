@@ -32,10 +32,10 @@
 
 <body>
   <?php 
+    include 'functions/loginconnection.php';
     include 'components/globalmodal.php';
-    include 'functions/loginconnection.php'; 
   ?>
-
+ 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -1088,10 +1088,6 @@
   <script src="components/js/modified.js"></script>
 
   
-
-
-  
-
 </body>
 
 </html>
