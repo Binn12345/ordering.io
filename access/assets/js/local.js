@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
 
     $('#user_destory').on('click', function () {
      
@@ -18,9 +19,9 @@ $(document).ready(function() {
           });
   
     });
-
+    // var to 30 minutes (30 * 60 * 1000 milliseconds)
     // var idleTimeout = 300000; // 5 minutes (adjust as needed)
-    var idleTimeout = 300000;
+    var idleTimeout = 1800000;
     var timeout;
     
     function startTimer() {
@@ -41,5 +42,29 @@ $(document).ready(function() {
     //     // Clear the input fields using jQuery
     //     $('#floatingInput, #floatingPassword').val('');
     // });
+     
+    
+    // // Function to show the ad modal
+    // function showAdModal() {
+    //     var adModal = document.getElementById('adModal');
+    //     adModal.style.display = 'block';
 
+    //     // Close the modal after 2 seconds
+    //     setTimeout(function () {
+    //         adModal.style.display = 'none';
+    //     }, 2000); // 2 seconds
+    // }
+
+    // // Close the ad modal when the close button is clicked
+    // var closeAd = document.getElementById('closeAd');
+    // closeAd.onclick = function () {
+    //     var adModal = document.getElementById('adModal');
+    //     adModal.style.display = 'none';
+    // };
+
+    // // Show the ad modal when the page loads
+    // window.onload = showAdModal;
+
+    
+    
 });

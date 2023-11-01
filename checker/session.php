@@ -6,9 +6,10 @@
         header("Location: /.."); // Redirect to the login page
         exit();
     }
-
+    
+    // trail where activity saved in db
     // Extend the session timeout (adjust as needed)
-    $inactiveTimeout = 300000; // 10 minutes
+    $inactiveTimeout = 1800000; // 30 minutes
 
     if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $inactiveTimeout) {
         session_unset();

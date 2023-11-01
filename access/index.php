@@ -59,6 +59,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/ads.css" rel="stylesheet"> -->
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
@@ -66,9 +67,43 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            text-align: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -310,15 +345,23 @@
     {
         include 'construct/sidebar.php';
         include 'construct/main.php';
+        
         include 'construct/footer.php';
     }
     else{
        include 'superadmintools/globals.php';
     }
 
+    
   ?>
-
-  
+  <!-- Ad Modal -->
+<div id="adModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAd">&times;</span>
+            <h3>Special Offer!</h3>
+            <p>Get 20% off on our premium services. Limited time offer.</p>
+        </div>
+    </div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -336,7 +379,41 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/local.js"></script>
+  <script>
+         var adModal = document.getElementById('adModal');
+        var closeAd = document.getElementById('closeAd');
+        var timer;
 
+        // Check if the modal should be shown (using session storage)
+        var modalShown = sessionStorage.getItem('modalShown');
+        if (!modalShown) {
+            // The modal should be shown, so display it
+            showAdModal();
+        }
+
+        // Function to show the ad modal
+        function showAdModal() {
+            adModal.style.display = 'block';
+
+            // Close the modal after 10 seconds
+            timer = setTimeout(function () {
+                hideAdModal();
+                // Set a flag in session storage to indicate that the modal has been shown
+                sessionStorage.setItem('modalShown', 'true');
+            }, 10000); // 10 seconds
+        }
+
+        // Function to hide the ad modal
+        function hideAdModal() {
+            adModal.style.display = 'none';
+            clearTimeout(timer);
+        }
+
+        // Close the ad modal when the close button is clicked
+        closeAd.onclick = function () {
+            hideAdModal();
+        };
+    </script>
 </body>
 
 </html>

@@ -5,10 +5,10 @@
       <div class="modal-header">
       </div>
       <div class="modal-body">
-      <form action="functions/loginconnection.php" method="POST" novalidate>
+      <form action="functions/loginconnection.php" method="POST" novalidate id="submitform">
         <p class="text-center small">Enter your username &amp; password to login</p>
           <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" name="username" placeholder="username">
+              <input type="email" class="form-control" id="floatingInput" name="username" placeholder="username" id="usernameInput">
               <label for="floatingInput">Username or Email</label>
           </div>
           <div class="form-floating">
