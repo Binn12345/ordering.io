@@ -6,6 +6,9 @@ $(document).ready(function() {
         $('#floatingInput, #floatingPassword').val('');
     });
 
+
+    
+
     // $('#access').on('click', function () {
     //     // Clear the input fields using jQuery
     //     $('#floatingInput, #floatingPassword').val('');

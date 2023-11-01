@@ -19,6 +19,24 @@ $(document).ready(function() {
   
     });
 
+    // var idleTimeout = 300000; // 5 minutes (adjust as needed)
+    var idleTimeout = 300000;
+    var timeout;
+    
+    function startTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(logout, idleTimeout);
+    }
+    
+    function logout() {
+        window.location.href = '../functions/logoutconnection.php';
+    }
+    
+    document.addEventListener('mousemove', startTimer);
+    document.addEventListener('keydown', startTimer);
+    
+    startTimer();
+
     // $('#access').on('click', function () {
     //     // Clear the input fields using jQuery
     //     $('#floatingInput, #floatingPassword').val('');

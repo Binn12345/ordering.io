@@ -2,6 +2,7 @@
   
   session_start();
   include '../class/user_checker.php';
+  include '../checker/session.php';
 
 //   // Create an instance of access_poke
 //     $isCheck = new access_poke();
