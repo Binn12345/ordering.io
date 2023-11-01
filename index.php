@@ -32,8 +32,15 @@
 
 <body>
   <?php 
+
+    // echo '<pre>', print_r(get_defined_vars(), true) ?: 'undefined index', '</pre>';die;
+    
     include 'functions/loginconnection.php';
     include 'components/globalmodal.php';
+
+    $h = $_GET['access_denied_error'] ?? "";
+
+    
   ?>
  
   <!-- ======= Header ======= -->
@@ -1087,6 +1094,28 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/main.js"></script>
   <script src="components/js/modified.js"></script>
+  <script>
+    
+    var h = <?php echo json_encode($h); ?>;
+  // var h = true; // boolean
+  var audio = new Audio('path/sound/denied.mp3'); // Replace with the actual path to your sound file
+  audio.muted = true;
+  function playLoginSound() {
+    audio.muted = false; // Unmute before playing
+    audio.play().catch(function (error) {
+      // Handle the error
+      // console.error("Failed to play audio: " + error.message);
+    });
+  }
+
+  // Wait for the document to be fully loaded and then play the sound
+  document.addEventListener('DOMContentLoaded', function () {
+    if (h) {
+      playLoginSound();
+    }
+  });
+</script>
+  
 
   
 </body>

@@ -37,34 +37,6 @@ $(document).ready(function() {
     document.addEventListener('keydown', startTimer);
     
     startTimer();
-
-    // $('#access').on('click', function () {
-    //     // Clear the input fields using jQuery
-    //     $('#floatingInput, #floatingPassword').val('');
-    // });
-     
-    
-    // // Function to show the ad modal
-    // function showAdModal() {
-    //     var adModal = document.getElementById('adModal');
-    //     adModal.style.display = 'block';
-
-    //     // Close the modal after 2 seconds
-    //     setTimeout(function () {
-    //         adModal.style.display = 'none';
-    //     }, 2000); // 2 seconds
-    // }
-
-    // // Close the ad modal when the close button is clicked
-    // var closeAd = document.getElementById('closeAd');
-    // closeAd.onclick = function () {
-    //     var adModal = document.getElementById('adModal');
-    //     adModal.style.display = 'none';
-    // };
-
-    // // Show the ad modal when the page loads
-    // window.onload = showAdModal;
-
     
     
 });
