@@ -9,8 +9,8 @@
     
     // trail where activity saved in db
     // Extend the session timeout (adjust as needed)
-    $inactiveTimeout = 1800000; // 30 minutes
-
+    // $inactiveTimeout = 1800000; // 30 minutes
+    $inactiveTimeout = 300000;
     if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $inactiveTimeout) {
         session_unset();
         session_destroy();

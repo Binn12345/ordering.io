@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
     // var to 30 minutes (30 * 60 * 1000 milliseconds)
     // var idleTimeout = 300000; // 5 minutes (adjust as needed)
-    var idleTimeout = 1800000;
+    var idleTimeout = 300000;
     var timeout;
     
     function startTimer() {

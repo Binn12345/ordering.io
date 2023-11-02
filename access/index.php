@@ -22,11 +22,12 @@
 //         )
 
 // )
-  // echo '<pre>', print_r($_SESSION, true) ?: 'undefined index', '</pre>';die;
+
+
   $transkey = password_hash('accessgranted', PASSWORD_BCRYPT);
   $userKey = $_SESSION['guest'];
 
-$h = $_SESSION['last_activity'] ?? "";
+  $h = $_SESSION['last_activity'] ?? "";
 
 ?>
 <!DOCTYPE html>

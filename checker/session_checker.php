@@ -8,6 +8,7 @@
     //     header('Location: ../');
     //     exit;
     // }
+    
      // Check if the user is already authenticated
     if(isset($_SESSION['user_authenticated']) && $_SESSION['user_authenticated'] === true) {
         // Redirect the user to the access page or any other page
@@ -18,7 +19,7 @@
 
     // Extend the session timeout (adjust as needed)
     // $inactiveTimeout = 600; // 10 minutes
-    // $inactiveTimeout = 3000;
+    // $inactiveTimeout = 300000000;
     // if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $inactiveTimeout) {
     //     session_unset();
     //     session_destroy();
@@ -26,7 +27,8 @@
     //     exit();
     // }
 
-    // // Update the last activity timestamp
+    // // // Update the last activity timestamp
     // $_SESSION['last_activity'] = time();
 
+    
     
