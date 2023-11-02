@@ -5,9 +5,9 @@
     use PHPMailer\PHPMailer\Exception;
 
     include 'dbconnection.php';
-    require '../PHPMailer/src/PHPMailer.php';
-    require '../PHPMailer/src/SMTP.php';
-    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/PHPMailer/src/SMTP.php';
+    require '../PHPMailer/PHPMailer/src/Exception.php';
     
     
     // echo '<pre>', print_r(get_defined_vars(), true) ?: 'undefined index', '</pre>';die;
@@ -81,8 +81,8 @@
                 $mail->Subject = $subject;
                 $mail->Body = $message;
 
-                 // Enable debugging to see the SMTP conversation
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                //  // Enable debugging to see the SMTP conversation
+                // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     
                 $mail->send();
                 // echo '<pre>', print_r($mail, true) ?: 'undefined index', '</pre>';die;
