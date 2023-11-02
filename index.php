@@ -1090,10 +1090,11 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="components/js/modified.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     
     var h = <?php echo json_encode($h); ?>;
@@ -1114,6 +1115,26 @@
       playLoginSound();
     }
   });
+
+    function regSubmit(){
+               
+                
+                var form = $('#regform').serialize();
+
+                $.ajax({
+
+                    type : 'POST',
+                    url  : 'functions/registration.php',
+                    data : form,
+                    success: function(response)
+                    {
+
+                    }
+
+
+
+                });
+            } 
 </script>
   
 
