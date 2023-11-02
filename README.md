@@ -1,5 +1,5 @@
 ## Food Hub 'Ordering System'
-- inspired by FoodPanda . . . 
+- inspired by FoodPanda && Grab . . . 
 
 ## Role
 - Superadmin
