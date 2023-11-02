@@ -35,7 +35,6 @@
       <form novalidate id="regform">
       <p class="text-center small">Enter your personal details to create account</p>
         <div class="form-floating mb-3">
-            <input type="hidden" class="form-control" name="uniqueID" value="0" id="floatingInput" placeholder="Fullname">
             <input type="email" class="form-control" name="rfname" id="floatingInput" placeholder="Fullname">
             <label for="floatingInput">Fullname</label>
         </div>
@@ -51,7 +50,7 @@
             <input type="password" class="form-control" name="rpassword" id="floatingPassword" placeholder="">
             <label for="floatingPassword">Password</label>
         </div>
-        <div class="form-check" style="margin-top: 1rem">
+        <div class="form-check" style="margin-top: 1rem" hidden>
             <input class="form-check-input" name="terms" type="checkbox" value="1" id="acceptTerms" required="">
             <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#" style="color:blue" >terms and conditions</a></label>
             <div class="invalid-feedback">You must agree before submitting.</div>

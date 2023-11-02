@@ -11,7 +11,13 @@
        $username = $_POST['username'];
        $password = $_POST['password'];
    
-       $query = "SELECT * FROM users WHERE username=? AND password=?";
+       $query = "SELECT * FROM users 
+                    JOIN personal_data
+                        on
+                        personal_data.ukey = users.idkey
+                    WHERE username=? 
+                    AND password=?
+                    AND isActive='1'";
        $stmt = $conn->prepare($query);
        $stmt->bind_param("ss", $username, $password);
    

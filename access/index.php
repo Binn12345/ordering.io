@@ -26,7 +26,7 @@
   $transkey = password_hash('accessgranted', PASSWORD_BCRYPT);
   $userKey = $_SESSION['guest'];
 
-  $h = $_SESSION['last_activity'] ?? "";
+$h = $_SESSION['last_activity'] ?? "";
 
 ?>
 <!DOCTYPE html>
@@ -339,7 +339,7 @@
     if($_SESSION['userdata']['userkey'] == '4')
     {
         
-        if($_SESSION['guest'] == '1'){
+        if($_SESSION['userdata']['isTerm'] == '0'){
           include 'construct/mainprofile.php';
         }else{
           include 'construct/sidebar.php';
@@ -375,11 +375,11 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/local.js"></script>
-
+    <script src="assets/js/local.js"></script>
+  
   <script>
         var userKey = <?php echo json_encode($userKey); ?>;
             // Check the condition
