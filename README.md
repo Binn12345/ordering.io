@@ -1,6 +1,4 @@
-
-#########################
-###Food Hub 'Ordering System'
+## Food Hub 'Ordering System'
 ## SQL
 - ALTER TABLE `users`
 CHANGE COLUMN `idkey` `idkey` BIGINT NULL DEFAULT NULL AFTER `id`,
