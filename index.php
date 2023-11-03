@@ -1118,10 +1118,48 @@
   });
 
     function regSubmit(){
-               
-                
-                var form = $('#regform').serialize();
 
+        var emailInput = $('#floatingInput2').val().trim();
+        var passwordInput = $('#floatingPassword4').val().trim();
+        var fullnameInput = $('#floatingInput1').val().trim();
+        var usernameInput = $('#floatingInput3').val().trim();
+    
+        const SwalConfig = {
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 2000,
+            background: '#f64341',
+            color: '#ffff',
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.resumeTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
+            }
+        };
+        if (emailInput === "" && passwordInput === "" && usernameInput === "" && fullnameInput === "") {
+            Swal.fire({...SwalConfig, icon: 'warning', title: 'Both fields must be required.'});
+            // Play the notification sound
+            playNotificationSound();
+        } else if (usernameInput === "") {
+            Swal.fire({...SwalConfig, icon: 'warning', title: 'Username must be required.'});
+            // Play the notification sound
+            playNotificationSound();
+        } else if (passwordInput === "") {
+            Swal.fire({...SwalConfig, icon: 'warning', title: 'Password must be required.'});
+            // Play the notification sound
+            playNotificationSound();
+        } else if (fullnameInput === "") {
+            Swal.fire({...SwalConfig, icon: 'warning', title: 'Fullname must be required.'});
+            // Play the notification sound
+            playNotificationSound();
+        } else if (emailInput === "") {
+            Swal.fire({...SwalConfig, icon: 'warning', title: 'Email must be required.'});
+            // Play the notification sound
+            playNotificationSound();
+        } else {
+  
+                var form = $('#regform').serialize();
                 $.ajax({
 
                     type : 'POST',
@@ -1129,12 +1167,43 @@
                     data : form,
                     success: function(response)
                     {
+                      console.log(response);
+                      document.getElementById("regform").reset(); 
+                      // Check the response and show a Swal message accordingly
+                      if (response.includes("Data inserted successfully, and an email notification has been sent to your Gmail account.")) {
+                          Swal.fire({
+                              icon: 'success',
+                              title: 'Success!',
+                              text: 'Data inserted successfully, and an email notification has been sent to your Gmail account.'
+                          });
 
+                          // Reset the form fields
+                           
+                      } else {
+                          Swal.fire({
+                              icon: 'error',
+                              title: 'Error!',
+                              text: response  // Display the error message from the server
+                          });
+                      }
                     }
 
 
 
                 });
+            }        
+             
+            function playNotificationSound() {
+            // Create an audio element to play the notification sound
+            var audio = new Audio('path/sound/error.mp3');
+    
+            // Play the sound
+            audio.play().catch(function(error) {
+                // Handle playback errors
+                console.error('Error playing notification sound: ' + error);
+            });
+        }
+                
             } 
 </script>
   

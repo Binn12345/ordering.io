@@ -336,24 +336,23 @@
   </header><!-- End Header -->
 
   <?php 
-
-    if($_SESSION['userdata']['userkey'] == '4')
+    // echo '<pre>', print_r($_SESSION, true) ?: 'undefined index', '</pre>';die;
+    // echo '<pre>', print_r($_SESSION['userdata'], true) ?: 'undefined index', '</pre>';die;
+    // echo '<pre>', var_dump($_SESSION['userdata']) ?: 'undefined index', '</pre>';die;
+    if($_SESSION['userdata']['userkey'] == "4")
     {
-        
-        if($_SESSION['userdata']['isTerm'] == '0'){
-          include 'construct/mainprofile.php';
-        }else{
-          include 'construct/sidebar.php';
-          include 'construct/main.php';
-          include 'construct/footer.php';
-        }
-        
+      
+      if ($_SESSION['userdata']['isTerm'] === '0'){
+        include 'construct/mainprofile.php';
+      } else {
+        // include 'construct/sidebar.php';
+        // include 'construct/main.php';
+        // include 'construct/footer.php';
+      }
     }
-    else{
-       include 'superadmintools/globals.php';
+    else {
+    include 'superadmintools/globals.php';
     }
-
-    
   ?>
   <!-- Ad Modal -->
 <div id="adModal" class="modal">
@@ -377,6 +376,7 @@
 
   <!-- Template Main JS File -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/main.js"></script>
     <script src="assets/js/local.js"></script>
@@ -431,7 +431,7 @@
             });
               
 
-            
+          
           
     </script>
 </body>

@@ -1,5 +1,23 @@
 $(document).ready(function() {
     
+    $('#saveregform').on('click', function(e){
+        e.preventDefault();
+
+        var data = $('#updform').serialize();
+
+        $.ajax({
+          type    : "POST",
+          data    :  data,
+          url     : 'process/updateform.php',
+          success : function(response){
+
+          }
+
+
+        });
+
+
+      });
 
     $('#user_destory').on('click', function () {
      

@@ -35,19 +35,19 @@
       <form novalidate id="regform">
       <p class="text-center small">Enter your personal details to create account</p>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" name="rfname" id="floatingInput" placeholder="Fullname">
+            <input type="email" class="form-control" name="rfname" id="floatingInput1" placeholder="Fullname">
             <label for="floatingInput">Fullname</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" name="remail" id="floatingInput" placeholder="Email">
+            <input type="email" class="form-control" name="remail" id="floatingInput2" placeholder="Email">
             <label for="floatingInput">Email</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="rusername" id="floatingInput" placeholder="Username">
+            <input type="text" class="form-control" name="rusername" id="floatingInput3" placeholder="Username">
             <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" name="rpassword" id="floatingPassword" placeholder="">
+            <input type="password" class="form-control" name="rpassword" id="floatingPassword4" placeholder="">
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-check" style="margin-top: 1rem" hidden>
@@ -60,7 +60,7 @@
       </div>
      
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onClick="regSubmit()">Submit</button>
+        <button type="button" class="btn btn-primary" onClick="regSubmit()" id=reg>Submit</button>
       </div>
     
     </div>
