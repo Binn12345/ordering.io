@@ -4,7 +4,7 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    include 'dbconnection.php';
+    include 'dbconnectionBETA.php';
     require '../PHPMailer/PHPMailer/src/PHPMailer.php';
     require '../PHPMailer/PHPMailer/src/SMTP.php';
     require '../PHPMailer/PHPMailer/src/Exception.php';
